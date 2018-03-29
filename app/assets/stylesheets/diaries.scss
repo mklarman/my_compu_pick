@@ -1,3 +1,23 @@
 // Place all the styles related to the diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#three_digit {
+	border:2px solid red;
+	width: 40px;
+	height: 25px;
+}
+
+#four_digit{
+	border: 2px solid red;
+	width: 60px;
+	height: 25px;
+}
+
+#mega{
+	border: 2px solid red;
+	width: 150px;
+	height: 25px;
+
+}

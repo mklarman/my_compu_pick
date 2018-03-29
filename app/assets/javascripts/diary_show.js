@@ -1,7 +1,16 @@
-// window.onload = function(){
-
-	var threeDigit = document.getElementById('three_digit')
+window.onload = function(){
+	var threeeDigits = document.getElementById("three_digit")
 	var fourDigit = document.getElementById('four_digit')
+	var zeros  = document.getElementById('zeros')
+	var ones = document.getElementById('ones')
+	var twos = document.getElementById('twos')
+	var threes = document.getElementById('threes')
+	var fours = document.getElementById('fours')
+	var fives = document.getElementById('fives')
+	var sixes = document.getElementById('sixes')
+	var sevens = document.getElementById('sevens')
+	var eights = document.getElementById('eights')
+	var nines = document.getElementById('nines')
 	var mega = document.getElementById('mega')
 	var val1 = document.getElementById("diary_address").value
 	var val2 = document.getElementById("diary_cell").value
@@ -18,35 +27,52 @@
 	var val13 = document.getElementById("diary_license_plate").value
 	var val14 = document.getElementById("diary_wake_up").value
 	var val15 = document.getElementById("diary_sensitive").value
-	var totalVal = val1.concat(val2).concat(val3).concat(val4).concat(val5).concat(val6).concat(val7).concat(val8).concat(val9).concat(val10).concat(val1).concat(val2).concat(val3).concat(val14).concat(val15)
+
+	var totalVal = val1.concat(val2).concat(val3).concat(val4).concat(val5).concat(val6).concat(val7).concat(val8).concat(val9).concat(val10).concat(val11).concat(val12).concat(val13).concat(val14).concat(val15)
 	console.log(totalVal)
+	digitFreq(totalVal)
+
+	console.log(val11)
+	console.log(val12)
+	console.log(val13)
+
+	
 
 	
 	
 	function digitFreq (numString){
-	    zeros = numString.split("0").length-1
-	    ones = numString.split("1").length-1
-	    twos = numString.split("2").length-1
-	    threes = numString.split("3").length-1
-	    fours = numString.split("4").length-1
-	    fives = numString.split("5").length-1
-	    sixes = numString.split("6").length-1
-	    sevens = numString.split("7").length-1
-	    eights = numString.split("8").length-1
-	    nines = numString.split("9").length-1
+	    zeroDigit = numString.split("0").length-1
+	    oneDigit = numString.split("1").length-1
+	    twoDigit = numString.split("2").length-1
+	    threeDigit = numString.split("3").length-1
+	    foursDigit = numString.split("4").length-1
+	    fivesDigit = numString.split("5").length-1
+	    sixesDigit = numString.split("6").length-1
+	    sevensDigit = numString.split("7").length-1
+	    eightsDigit = numString.split("8").length-1
+	    ninesDigit = numString.split("9").length-1
 	    numbers = numString.length;
-	    zeroPrcnt = zeros/numbers    
-	    onePrcnt = ones/numbers     
-	    twoPrcnt = twos/numbers     
-	    threePrcnt = threes/numbers     
-	    fourPrcnt = fours/numbers     
-	    fivePrcnt = fives/numbers     
-	    sixPrcnt = sixes/numbers     
-	    sevPrcnt = sevens/numbers     
-	    eightPrcnt = eights/numbers     
-	    ninePrcnt = nines/numbers     
+	    zeroPrcnt = zeroDigit/numbers    
+	    onePrcnt = oneDigit/numbers     
+	    twoPrcnt = twoDigit/numbers     
+	    threePrcnt = threeDigit/numbers     
+	    fourPrcnt = foursDigit/numbers     
+	    fivePrcnt = fivesDigit/numbers     
+	    sixPrcnt = sixesDigit/numbers     
+	    sevPrcnt = sevensDigit/numbers     
+	    eightPrcnt = eightsDigit/numbers     
+	    ninePrcnt = ninesDigit/numbers
 
-	    console.log(zeroPrcnt + onePrcnt + twoPrcnt + threePrcnt + fourPrcnt + fivePrcnt+ sixPrcnt + sevPrcnt + eightPrcnt + ninePrcnt)
+	    zeros.innerHTML = "0:" + " " + (zeroPrcnt * 100).toFixed(2) + "%"
+	    ones.innerHTML = "1:" + " " + (onePrcnt * 100).toFixed(2) + "%"
+	    twos.innerHTML = "2:" + " " + (twoPrcnt * 100).toFixed(2) + "%"
+	    threes.innerHTML ="3:" + " " + (threePrcnt * 100).toFixed(2) + "%"
+	    fours.innerHTML = "4:" + " " + (fourPrcnt * 100).toFixed(2) + "%"
+	    fives.innerHTML = "5:" + " " + (fivePrcnt * 100).toFixed(2) + "%"
+	    sixes.innerHTML = "6:" + " " + (sixPrcnt * 100).toFixed(2) + "%"
+	    sevens.innerHTML = "7:" + " " + (sevPrcnt * 100).toFixed(2) + "%"
+	    eights.innerHTML = "8:" + " " + (eightPrcnt * 100).toFixed(2) + "%"
+	    nines.innerHTML = "9:" + " " + (ninePrcnt * 100).toFixed(2) + "%"   
   
 	}
 
@@ -56,7 +82,7 @@
 	    num2 = numString[(Math.floor(Math.random() * numString.length ))];
 	    num3 = numString[(Math.floor(Math.random() * numString.length ))];
 
-	    threeDigit.innerHTML = (num1 + num2 + num3)
+	    threeeDigits.innerHTML = (num1 + num2 + num3)
 	}
 
 	function fourDigitNum(numString){
@@ -143,7 +169,25 @@
 	    mega.innerHTML = firstFive(totalVal) + "," + moneyBall(totalVal)
 	}
 
+	var pick3 = document.getElementById("pick3")
+	var pick4 = document.getElementById("pick4")
+	var mTick = document.getElementById("mTick")
 
 
-// }
+
+	pick3.addEventListener("click", function(){
+		threeDigitNum(totalVal)
+	})
+
+
+
+	pick4.addEventListener("click", function(){
+		fourDigitNum(totalVal)
+	})
+
+	mTick.addEventListener("click", megaTicket)
+
+}
+
+
 

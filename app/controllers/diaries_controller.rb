@@ -20,7 +20,7 @@ class DiariesController < ApplicationController
   	diary = Diary.new(diary_params)
     diary.user_id = user.id
   	if diary.save
-  		redirect_to diaries_path
+  		redirect_to diary_path(diary.id)
   	else
   	  	render  new_diary_path
   	end
@@ -37,7 +37,7 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
     @diary.user_id = current_user.id
       if @diary.update(diary_params)   
-        redirect_to diaries_path
+        redirect_to diary_path
       else 
         render users_path
       end

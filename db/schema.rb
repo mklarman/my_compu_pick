@@ -10,25 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328154832) do
+ActiveRecord::Schema.define(version: 20180329204256) do
 
   create_table "diaries", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "address"
-    t.integer "cell"
-    t.integer "birthdate"
-    t.integer "zipcode"
-    t.integer "age"
-    t.integer "partner_birthdate"
-    t.integer "work_addr"
-    t.integer "work_num"
-    t.integer "apt_num"
-    t.integer "kids"
-    t.integer "kids_birth"
-    t.integer "lucky_nums"
-    t.integer "license_plate"
-    t.integer "wake_up"
-    t.integer "sensitive"
+    t.string "address", limit: 8
+    t.string "cell", limit: 8
+    t.string "birthdate", limit: 8
+    t.string "zipcode", limit: 8
+    t.string "age", limit: 8
+    t.string "partner_birthdate", limit: 8
+    t.string "work_addr", limit: 8
+    t.string "work_num", limit: 8
+    t.string "apt_num", limit: 8
+    t.string "kids", limit: 8
+    t.string "kids_birth", limit: 8
+    t.string "lucky_nums", limit: 8
+    t.string "license_plate", limit: 8
+    t.string "wake_up", limit: 8
+    t.string "sensitive", limit: 8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
