@@ -1,0 +1,9 @@
+<h3>Hello</h3>
+
+<% if !current_user.diary %>
+	<%= link_to "Enter Numbers", new_diary_path %>
+<% end %>
+
+<% if current_user.diary %>
+	<a href="/users/<%= current_user.id %>">My Profile</a>
+	<% end %> 

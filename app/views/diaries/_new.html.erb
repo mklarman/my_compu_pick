@@ -1,0 +1,22 @@
+<h3>New Form For Diary</h3>
+
+<%= form_for @diary do |f| %>
+<%= f.hidden_field :user_id, :value => @user.id %>
+<div> <%=f.text_field :birthdate %></div>
+<div> <%=f.text_field :cell %></div>
+<div> <%=f.text_field :address %></div>
+<div> <%=f.text_field :zipcode %></div>
+<div> <%=f.text_field :age %></div>
+<div> <%=f.text_field :partner_birthdate %></div>
+<div> <%=f.text_field :work_addr %></div>
+<div> <%=f.text_field :work_num %></div>
+<div> <%=f.text_field :apt_num %></div>
+<div> <%=f.text_field :kids %></div>
+<div> <%=f.text_field :kids_birth %></div>
+<div> <%=f.text_field :lucky_nums %></div>
+<div> <%=f.text_field :license_plate %></div>
+<div> <%=f.text_field :wake_up %></div>
+<div> <%=f.text_field :sensitive %></div>
+	<%=f.submit %>
+
+<% end %>
