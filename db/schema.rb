@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330034520) do
+ActiveRecord::Schema.define(version: 20180330131732) do
 
   create_table "diaries", force: :cascade do |t|
     t.integer "user_id"
@@ -33,10 +33,31 @@ ActiveRecord::Schema.define(version: 20180330034520) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "four_digit_draws", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "pick_four"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mega_draws", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "mega_draw"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "states", force: :cascade do |t|
     t.string "name"
     t.string "three_digit"
     t.string "four_digit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "three_digit_draws", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "pick_three"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

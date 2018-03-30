@@ -27,14 +27,18 @@ window.onload = function(){
 	var val13 = document.getElementById("diary_license_plate").value
 	var val14 = document.getElementById("diary_wake_up").value
 	var val15 = document.getElementById("diary_sensitive").value
+	var target3 = document.getElementById("three_digit_draw_pick_three")
+	var target4 = document.getElementById("four_digit_draw_pick_four")
+	var megaTarget = document.getElementById("mega_draw_mega_draw")
+	var newThreeDigitDraw = document.getElementById("new_three_digit_draw")
+	var newFourDigitDraw = document.getElementById("new_four_digit_draw")
+	var newMegaDraw = document.getElementById("new_mega_draw")
 
 	var totalVal = val1.concat(val2).concat(val3).concat(val4).concat(val5).concat(val6).concat(val7).concat(val8).concat(val9).concat(val10).concat(val11).concat(val12).concat(val13).concat(val14).concat(val15)
 	console.log(totalVal)
 	digitFreq(totalVal)
 
-	console.log(val11)
-	console.log(val12)
-	console.log(val13)
+	
 
 	
 
@@ -83,6 +87,7 @@ window.onload = function(){
 	    num3 = numString[(Math.floor(Math.random() * numString.length ))];
 
 	    threeeDigits.innerHTML = (num1 + num2 + num3)
+	    target3.value = (num1 + num2 + num3)
 	}
 
 	function fourDigitNum(numString){
@@ -92,6 +97,7 @@ window.onload = function(){
 	    num4 = numString.split('')[(Math.floor(Math.random() * numString.length ))];
 
 	    fourDigit.innerHTML = (num1 + num2 + num3 + num4)
+	    target4.value = (num1 + num2 + num3 + num4)
 	}
 
 	function numberType (max){
@@ -167,6 +173,7 @@ window.onload = function(){
 
 	function megaTicket(){
 	    mega.innerHTML = firstFive(totalVal) + "," + moneyBall(totalVal)
+	    megaTarget.value = firstFive(totalVal) + "," + moneyBall(totalVal)
 	}
 
 	var pick3 = document.getElementById("pick3")
@@ -177,15 +184,21 @@ window.onload = function(){
 
 	pick3.addEventListener("click", function(){
 		threeDigitNum(totalVal)
+		newThreeDigitDraw.submit()
 	})
 
 
 
 	pick4.addEventListener("click", function(){
 		fourDigitNum(totalVal)
+		newFourDigitDraw.submit()
 	})
 
-	mTick.addEventListener("click", megaTicket)
+	mTick.addEventListener("click", function(){
+		megaTicket()
+		newMegaDraw.submit()
+	})
+
 
 }
 

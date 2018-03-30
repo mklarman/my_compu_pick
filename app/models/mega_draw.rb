@@ -1,0 +1,2 @@
+class MegaDraw < ApplicationRecord
+end

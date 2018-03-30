@@ -7,11 +7,20 @@ class DiariesController < ApplicationController
 	def new
   	@diary = Diary.new
   	@user = current_user
+    @pick3 = ThreeDigitDraw.new
+    @pick4 = FourDigitDraw.new
+    @mega = MegaDigitDraw.new
   end
 
   def show
     @user = current_user
     @diary2 = Diary.find_by_id(params[:id])
+    @pick3 = ThreeDigitDraw.new
+    @pick4 = FourDigitDraw.new
+    @mega = MegaDraw.new
+    @matches = []
+    
+
 
   end
 
@@ -25,8 +34,6 @@ class DiariesController < ApplicationController
   	  	render  new_diary_path
   	end
 
-  	@concatination = params[:diary][:address] << params[:diary][:age]
-  	puts @concatination
   end
 
   def edit
@@ -50,4 +57,17 @@ class DiariesController < ApplicationController
   def diary_params
  		params.require(:diary).permit(:address, :cell, :birthdate, :zipcode, :age, :partner_birthdate, :work_addr, :work_num, :apt_num, :kids, :kids_birth, :lucky_nums, :license_plate, :wake_up, :sensitive, :user_id)
  	end
+  
+  def four_digit_draw_params
+    params.require(:four_digit_draw).permit(:user_id, :pick_four)
+  end
+  
+  def three_digit_draw_params
+    params.require(:three_digit_draw).permit(:user_id, :pick_three)
+  end
+
+  def mega_draw_params
+    params.require(:mega_draw).permit(:user_id, :mega_draw)
+  end
+
 end

@@ -6,6 +6,10 @@ get "/users" => "welcome#index"
 # 
 resources :states
 resources :diaries
+resources :three_digit_draws
+resources :four_digit_draws
+resources :mega_draws
+
 
 devise_for :users, :controllers => { :registrations => 'users/registrations' }
 devise_scope :user do

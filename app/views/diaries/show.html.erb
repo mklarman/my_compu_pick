@@ -3,6 +3,10 @@
 
 <%= render 'edit' %>
 
+<div id="hiddenForm">
+	<%= render 'new' %>
+</div>
+
 <div id='three_digit'></div>
 <div id='four_digit'></div>
 <div id='mega'></div>
@@ -23,6 +27,14 @@
 <input id="pick3" type="submit" value="Pick 3">
 <input id="pick4" type="submit" value="Pick 4">
 <input id="mTick" type="submit" value="Mega Lott.">
+
+<% @user.three_digit_draws.uniq.each do |t| %>
+	<% if t.pick_three == @user.state.three_digit %>
+	<% @matches << t.pick_three %>
+		<% end %>
+	<% end %>
+
+<%= @matches %>
 
 
 
