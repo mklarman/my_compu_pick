@@ -16,6 +16,8 @@
     <% else %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <a href="/users/<%= current_user.id %>">My Profile</a>
+    <%= link_to "State Lottery Results", states_path %>
+    <%= link_to "My RNG", diary_path(current_user.diary.id) %>
     <% end %>
 
 

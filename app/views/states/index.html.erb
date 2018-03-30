@@ -1,0 +1,5 @@
+<h3>State Lottery Results</h3>
+
+<% @states.each do |s| %>
+   <a href="/states/<%= s.id %>"><%= s.name %><br></a>
+	<% end %>

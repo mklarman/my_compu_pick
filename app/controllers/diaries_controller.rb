@@ -11,7 +11,7 @@ class DiariesController < ApplicationController
 
   def show
     @user = current_user
-    @diary2 = Diary.find(params[:id])
+    @diary2 = Diary.find_by_id(params[:id])
 
   end
 
@@ -37,9 +37,9 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
     @diary.user_id = current_user.id
       if @diary.update(diary_params)   
-        redirect_to diary_path
+        redirect_to diary_path(@diary.id)
       else 
-        render users_path
+        render diaries_path
       end
   end
 
