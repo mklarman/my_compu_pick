@@ -32,35 +32,64 @@
 
 
 <div id="users_three">
+<% if @user.three_digit_draws %>
 	<% @user.three_digit_draws.last(10).uniq.reverse.each do |t| %>
 		<%= t.pick_three %><br>
 	<% end %>
+<% end %>
 </div>
 
 <div id="users_four">
+<% if @user.four_digit_draws %>
 	<% @user.four_digit_draws.uniq.reverse.each do |t| %>
 		<%= t.pick_four %><br>
 	<% end %>
+<% end %>
 </div>
 
 <div id="users_mega">
+<% if @user.mega_draws %>
 	<% @user.mega_draws.uniq.reverse.each do |t| %>
 		<%= t.mega_draw %><br>
 	<% end %>
+<% end %>
 </div>
 
 <div id='ticket_three'>
+<% if !@user.three_digit_draws %>
 	<%= @user.three_digit_draws.last.pick_three %>
+	<% end %>
 </div>
 
 <div id='ticket_four'>
+<% if !@user.four_digit_draws %>
 	<%= @user.four_digit_draws.last.pick_four %>
+	<% end %>
 </div>
 
 <div id='ticket_mega'>
+<% if !@user.mega_draws %>
 	<%= @user.mega_draws.last.mega_draw %>
+	<% end %>
 </div>
 
+<div id='ticket_three2'>
+<% if @user.three_digit_draws %>
+	<%= @user.three_digit_draws.last.pick_three %>
+	<% end %>
+</div>
+
+<div id='ticket_four2'>
+<% if @user.four_digit_draws %>
+	<%= @user.four_digit_draws.last.pick_four %>
+	<% end %>
+</div>
+
+<div id='ticket_mega2'>
+<% if @user.mega_draws %>
+	<%= @user.mega_draws.last.mega_draw %>
+	<% end %>
+</div>
 
 
 

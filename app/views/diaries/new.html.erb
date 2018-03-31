@@ -1,4 +1,9 @@
-<h3>Form For Diary</h3>
+<div class="the_welcome">
+	<p>Below is a form that will collect all the numbers that define you and surround you in society.  Think of the form as a guide.  Feel free to enter any numbers you feel mean something to you anywhere in the form.
+
+</div>
+
+<div id="new_form">
 
 <%= form_for @diary do |f| %>
 <%= f.hidden_field :user_id, :value => @user.id %>
@@ -20,3 +25,4 @@
 	<%=f.submit %>
 
 <% end %>
+</div>

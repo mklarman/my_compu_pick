@@ -1,60 +1,80 @@
-<h2>Sign up</h2>
+<div class="the_welcome">
 
-STATE KEYS:
+  <p>Welcome to My_Compu_Pix.  The only custom computer pick app for the lotery on the web.  The first step is to create an account.  Make sure to find your state id number in the key below.
+</div>
 
-OH - 1
-AL - 2
-AZ - 3
-AR - 4
-CA - 5
-CO - 6
-CT - 7
-DE - 8
-FL - 9
-GA - 10
-HI - 11
-ID - 12
-IL - 13
-IN - 14
-IA - 15
-KS - 16
-KY - 17
-LA - 18
-ME - 19
-MD - 20
-MA - 21
-MI - 22
-MN - 23
-MS - 24
-MO - 25
-MT - 26
-NE - 27
-NV - 28
-NH - 29
-NJ - 30
-NM - 31
-NY - 32
-NC - 33
-ND - 34
-OK - 35
-OR - 36
-PA - 37
-RI - 38
-SC - 39
-SD - 40
-TN - 41
-TX - 42
-UT - 43
-VT - 44
-VA - 45
-WA - 46
-WV - 47
-WI - 48
-WY - 49
-AK - 50
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div = id="state_keys_label">STATE KEYS:</div>
+
+<div class="first_ten">
+  OH - 1
+  AL - 2
+  AZ - 3
+  AR - 4
+  CA - 5
+  CO - 6
+  CT - 7
+  DE - 8
+  FL - 9
+  GA - 10
+</div>
+
+<div class="first_ten">
+  HI - 11
+  ID - 12
+  IL - 13
+  IN - 14
+  IA - 15
+  KS - 16
+  KY - 17
+  LA - 18
+  ME - 19
+  MD - 20
+</div>
+
+<div class="first_ten">
+  MA - 21
+  MI - 22
+  MN - 23
+  MS - 24
+  MO - 25
+  MT - 26
+  NE - 27
+  NV - 28
+  NH - 29
+  NJ - 30
+</div>
+
+<div class="first_ten">
+  NM - 31
+  NY - 32
+  NC - 33
+  ND - 34
+  OK - 35
+  OR - 36
+  PA - 37
+  RI - 38
+  SC - 39
+  SD - 40
+</div>
+
+<div class="first_ten">
+  TN - 41
+  TX - 42
+  UT - 43
+  VT - 44
+  VA - 45
+  WA - 46
+  WV - 47
+  WI - 48
+  WY - 49
+  AK - 50
+</div>
+
+<div class="devise_form">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :first_name %>
@@ -63,30 +83,35 @@ AK - 50
 
    <div class="field">
     <%= f.label :state_id %>
-    <%= f.select :state_id, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50'] %>
+    <div id="select_state"><%= f.select :state_id, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50'] %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+

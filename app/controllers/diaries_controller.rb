@@ -9,7 +9,7 @@ class DiariesController < ApplicationController
   	@user = current_user
     @pick3 = ThreeDigitDraw.new
     @pick4 = FourDigitDraw.new
-    @mega = MegaDigitDraw.new
+    @mega = MegaDraw.new
   end
 
   def show
@@ -35,7 +35,7 @@ class DiariesController < ApplicationController
   end
 
   def edit
-    @diary = Diary.find_by_id(params[:id])
+    @diary2 = Diary.find_by_id(params[:id])
   end
 
   def update

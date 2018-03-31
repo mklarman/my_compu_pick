@@ -1,7 +1,7 @@
 <h2>Edit form</h2>
 
-<%= form_for @diary2 do |f| %>
-
+<%= form_for @user.diary do |f| %>
+<%= f.hidden_field :user_id, :value => @user.id %>
 <div> Birthday:<%=f.text_field :birthdate %></div>
 <div> Cell Phone#:<%=f.text_field :cell %></div>
 <div> #'s in adress:<%=f.text_field :address %></div>
