@@ -11,7 +11,7 @@ class MegaDrawsController < ApplicationController
   	mega = MegaDraw.new(mega_draw_params)
     mega.user_id = user.id
   	if mega.save
-  		redirect_to states_path
+  		redirect_back(fallback_location: root_path)
   	else
   	  	render  diaries_path
   	end

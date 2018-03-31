@@ -28,13 +28,40 @@
 <input id="pick4" type="submit" value="Pick 4">
 <input id="mTick" type="submit" value="Mega Lott.">
 
-<% @user.three_digit_draws.uniq.each do |t| %>
-	<% if t.pick_three == @user.state.three_digit %>
-	<% @matches << t.pick_three %>
-		<% end %>
-	<% end %>
 
-<%= @matches %>
+
+
+<div id="users_three">
+	<% @user.three_digit_draws.last(10).uniq.reverse.each do |t| %>
+		<%= t.pick_three %><br>
+	<% end %>
+</div>
+
+<div id="users_four">
+	<% @user.four_digit_draws.uniq.reverse.each do |t| %>
+		<%= t.pick_four %><br>
+	<% end %>
+</div>
+
+<div id="users_mega">
+	<% @user.mega_draws.uniq.reverse.each do |t| %>
+		<%= t.mega_draw %><br>
+	<% end %>
+</div>
+
+<div id='ticket_three'>
+	<%= @user.three_digit_draws.last.pick_three %>
+</div>
+
+<div id='ticket_four'>
+	<%= @user.four_digit_draws.last.pick_four %>
+</div>
+
+<div id='ticket_mega'>
+	<%= @user.mega_draws.last.mega_draw %>
+</div>
+
+
 
 
 

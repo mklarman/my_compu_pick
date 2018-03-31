@@ -86,7 +86,7 @@ window.onload = function(){
 	    num2 = numString[(Math.floor(Math.random() * numString.length ))];
 	    num3 = numString[(Math.floor(Math.random() * numString.length ))];
 
-	    threeeDigits.innerHTML = (num1 + num2 + num3)
+	   
 	    target3.value = (num1 + num2 + num3)
 	}
 
@@ -96,7 +96,7 @@ window.onload = function(){
 	    num3 = numString.split('')[(Math.floor(Math.random() * numString.length ))];
 	    num4 = numString.split('')[(Math.floor(Math.random() * numString.length ))];
 
-	    fourDigit.innerHTML = (num1 + num2 + num3 + num4)
+	    
 	    target4.value = (num1 + num2 + num3 + num4)
 	}
 
@@ -172,7 +172,7 @@ window.onload = function(){
 	}
 
 	function megaTicket(){
-	    mega.innerHTML = firstFive(totalVal) + "," + moneyBall(totalVal)
+	    
 	    megaTarget.value = firstFive(totalVal) + "," + moneyBall(totalVal)
 	}
 

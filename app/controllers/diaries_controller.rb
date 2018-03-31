@@ -18,11 +18,9 @@ class DiariesController < ApplicationController
     @pick3 = ThreeDigitDraw.new
     @pick4 = FourDigitDraw.new
     @mega = MegaDraw.new
-    @matches = []
-    
-
-
+    @hit = ""
   end
+
 
   def create
   	user = current_user
