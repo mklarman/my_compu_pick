@@ -55,40 +55,26 @@
 <% end %>
 </div>
 
-<div id='ticket_three'>
-<% if !@user.three_digit_draws %>
-	<%= @user.three_digit_draws.last.pick_three %>
-	<% end %>
-</div>
-
-<div id='ticket_four'>
-<% if !@user.four_digit_draws %>
-	<%= @user.four_digit_draws.last.pick_four %>
-	<% end %>
-</div>
-
-<div id='ticket_mega'>
-<% if !@user.mega_draws %>
-	<%= @user.mega_draws.last.mega_draw %>
-	<% end %>
-</div>
 
 <div id='ticket_three2'>
-<% if @user.three_digit_draws %>
+<% if @user.three_digit_draws.last %>
+
 	<%= @user.three_digit_draws.last.pick_three %>
-	<% end %>
+<% end %>
 </div>
 
 <div id='ticket_four2'>
-<% if @user.four_digit_draws %>
+<% if @user.four_digit_draws.last %>
+
 	<%= @user.four_digit_draws.last.pick_four %>
-	<% end %>
+<% end %>
+	
 </div>
 
 <div id='ticket_mega2'>
-<% if @user.mega_draws %>
+<% if @user.mega_draws.last %>
 	<%= @user.mega_draws.last.mega_draw %>
-	<% end %>
+<% end %>
 </div>
 
 
