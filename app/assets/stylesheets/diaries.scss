@@ -16,5 +16,179 @@
 
 
 #hiddenForm{
-	visibility: hidden;
+	display: none;
+}
+
+.form_wrapper{
+  text-align: left;
+  padding: 1vmax;
+  padding-bottom: 4vmax;
+  border-radius: 1vmax;
+  margin-top: 2vmax;
+}
+
+.edit_label {
+  position: relative;
+  text-decoration: none;
+  font-family: main_font;
+  font-size: 1.5vmax;
+  line-height: 1.5vmax;
+  color: rgb(40, 50, 50);
+  background: none;
+  border: none;
+  user-select: none;
+  box-shadow: none;
+  outline-width: 0;
+  margin-bottom:5px;
+  overflow-wrap: break-word;
+  width: 100%;
+  text-align: left;
+}
+
+.edit_field{	
+  width:100%;	
+  position: relative;
+  font-family: main_font;
+  font-size: 1.5vmax;
+  line-height: 1.5vmax;
+  text-align: center;
+  color: rgb(40, 50, 50);
+  background: none; 
+  border: none;
+  border-bottom: 0.1vmax solid rgb(40, 50, 50);
+  outline-width: 0; 
+  margin-bottom:5px;
+}
+
+#freq_container{
+	height: 350px;
+	width: 320px;
+	border: 1px solid red;
+	margin-top: 5px;
+	margin-bottom: 8px;
+	font-size: 22px;
+	text-align: center;
+}
+
+#freq_label{
+	height: 80px;
+	width: 320px;
+	border: 1px solid red;
+}
+
+#pick3{
+	margin-top: 5px;
+	height: 100px;
+	width: 220px;
+	border: 1px solid red;
+	font-size: 30px;
+	border-radius: 20%;
+	margin-bottom: 15px;
+	background: green;
+}
+
+#pick4{
+	height: 100px;
+	width: 220px;
+	border: 1px solid red;
+	font-size: 30px;
+	border-radius: 20%;
+	background: blue;
+	margin-bottom: 15px;
+
+}
+
+#mTick{
+	height: 100px;
+	width: 220px;
+	border: 1px solid red;
+	font-size: 30px;
+	border-radius: 20%;
+	background: red;
+	margin-bottom: 15px;
+
+}
+#button_container{
+	height: 350px;
+	width: 250px;
+	border: 1px solid red;
+	text-align: center;
+	margin-left: 345px;
+	margin-top: -360px;
+	margin-bottom: 10px;
+}
+
+#users_three{
+	height: 430px;
+	width: 250px;
+	border: 1px solid red;
+	margin-top: 100px;
+	font-size: 30px;
+	margin-left: 630px;
+	text-align: center;
+	margin-top: -360px;
+}
+
+#users_four{
+	height: 430px;
+	width: 250px;
+	border: 1px solid red;
+	font-size: 30px;
+	margin-left: 890px;
+	text-align: center;
+	margin-top: -432px;
+
+}
+
+#users_mega{
+	height: 430px;
+	width: 250px;
+	border: 1px solid red;
+	margin-top: -360px;
+	font-size: 30px;
+	margin-left: 1150px;
+	text-align: center;
+	margin-top: -432px;
+
+
+}
+
+.user_ticket{
+	height: 200px;
+	width: 350px;
+	border: 1px solid red;
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 32px;
+}
+
+#user_print_out{
+	height: 250px;
+	width: 1400px;
+	display: inline-block;
+	border: 1px solid red;
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+
+.match_container{
+	height: 430px;
+	width: 290px;
+	border: 1px solid red;
+	font-size: 30px;
+	margin-left: 10px;
+	text-align: center;
+	margin-top: 0px;
+	display: inline-block;
+	margin-left: 125px;
+	overflow: none;
+}
+
+#users_container{
+	height: 440px;
+	width: 1400px;
+	border: 1px solid red;
+
 }

@@ -1,22 +1,39 @@
-<h2>Edit form</h2>
+<h2>Number Diary of <%= current_user.fname %></h2>
 
-<%= form_for @user.diary do |f| %>
-<%= f.hidden_field :user_id, :value => @user.id %>
-<div> Birthday:<%=f.text_field :birthdate %></div>
-<div> Cell Phone#:<%=f.text_field :cell %></div>
-<div> #'s in adress:<%=f.text_field :address %></div>
-<div> zipcode:<%=f.text_field :zipcode %></div>
-<div> age:<%=f.text_field :age %></div>
-<div> Sig. Other Bday:<%=f.text_field :partner_birthdate %></div>
-<div> Work Addr:<%=f.text_field :work_addr %></div>
-<div> Badge/Work ID #:<%=f.text_field :work_num %></div>
-<div> Apt. #:<%=f.text_field :apt_num %></div>
-<div> # Of Kids:<%=f.text_field :kids %></div>
-<div> Kids Bday<%=f.text_field :kids_birth %></div>
-<div> Lucky Numbers:<%=f.text_field :lucky_nums %></div>
-<div> license_plate:<%=f.text_field :license_plate %></div>
-<div> Time You Wake Up<%=f.text_field :wake_up %></div>
-<div> Sensitive #'s Jumbled<%=f.text_field :sensitive %></div>
-<div> <%= f.submit %></div>
+<div class='form_wrapper'>
+	<%= form_for @user.diary do |f| %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+	<div class='edit_label'> Birthday:</div>
+		<div><%=f.text_field :birthdate, class: 'edit_field' %></div>
+	<div class='edit_label'> Cell Phone#:</div>
+		<div><%=f.text_field :cell, class: 'edit_field' %></div>
+	<div class='edit_label'> #'s in adress:</div>
+		<div><%=f.text_field :address, class: 'edit_field' %></div>
+	<div class='edit_label'> zipcode:</div>
+		<div><%=f.text_field :zipcode, class: 'edit_field' %></div>
+	<div class='edit_label'> age:</div>
+		<div><%=f.text_field :age, class: 'edit_field' %></div>
+	<div class='edit_label'> Sig. Other Bday:</div>
+		<div><%=f.text_field :partner_birthdate, class: 'edit_field' %></div>
+	<div class='edit_label'> Work Addr:</div>
+		<div><%=f.text_field :work_addr, class: 'edit_field' %></div>
+	<div class='edit_label'> Badge/Work ID #:</div>
+		<div><%=f.text_field :work_num, class: 'edit_field' %></div>
+	<div class='edit_label'> Apt. #:</div>
+		<div><%=f.text_field :apt_num, class: 'edit_field' %></div>
+	<div class='edit_label'> # Of Kids:</div>
+		<div><%=f.text_field :kids, class: 'edit_field' %></div>
+	<div class='edit_label'> Kids Bday:</div>
+		<div><%=f.text_field :kids_birth, class: 'edit_field' %></div>
+	<div class='edit_label'> Lucky Numbers:</div>
+		<div><%=f.text_field :lucky_nums, class: 'edit_field' %></div>
+	<div class='edit_label'> license_plate:</div>
+		<div><%=f.text_field :license_plate, class: 'edit_field' %></div>
+	<div class='edit_label'> Time You Wake Up:</div>
+		<div><%=f.text_field :wake_up, class: 'edit_field' %></div>
+	<div class='edit_label'> Sensitive #'s Jumbled:</div>
+		<div><%=f.text_field :sensitive, class: 'edit_field' %></div>
+	<div class='action_button'> <%= f.submit %></div>
 
-<% end %>
+	<% end %>
+</div>

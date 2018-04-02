@@ -18,7 +18,10 @@ class DiariesController < ApplicationController
     @pick3 = ThreeDigitDraw.new
     @pick4 = FourDigitDraw.new
     @mega = MegaDraw.new
-    @hit = ""
+    @hit3 = []
+    @hit4 = []
+    @hitM = []
+    @state = State.find(51)
   end
 
 

@@ -11,7 +11,8 @@
 <div id='four_digit'></div>
 <div id='mega'></div>
 
-<div id = "container1">
+<div id = "freq_container">
+	<div id='freq_label'>% CHANCE EACH DIGIT APPEARS IN YOUR COMPU-PIX</div>
 	<div class="num_label" id="zeros"></div>
 	<div class="num_label" id="ones"></div>
 	<div class="num_label" id="twos"></div>
@@ -24,60 +25,105 @@
 	<div class="num_label" id="nines"></div>
 </div>
 
-<input id="pick3" type="submit" value="Pick 3">
-<input id="pick4" type="submit" value="Pick 4">
-<input id="mTick" type="submit" value="Mega Lott.">
+<div id="button_container">
+	<input id="pick3" type="submit" value="Draw Pick 3">
+	<input id="pick4" type="submit" value="Draw Pick 4">
+	<input id="mTick" type="submit" value="Draw Mega Lott.">
+</div>
 
 
 
 
-<div id="users_three">
+<div id="users_three">LAST TEN 3 DIGIT DRAWS
 <% if @user.three_digit_draws %>
 	<% @user.three_digit_draws.last(10).uniq.reverse.each do |t| %>
-		<%= t.pick_three %><br>
+		<div class="last_ten"><%= t.pick_three %><br></div>
+		<div><%#= t.created_at %></div>
 	<% end %>
 <% end %>
 </div>
 
-<div id="users_four">
+<div id="users_four">LAST TEN 4 DIGIT DRAWS
 <% if @user.four_digit_draws %>
-	<% @user.four_digit_draws.uniq.reverse.each do |t| %>
-		<%= t.pick_four %><br>
+	<% @user.four_digit_draws.last(10).uniq.reverse.each do |t| %>
+		<div class='last_ten'><%= t.pick_four %></div>
 	<% end %>
 <% end %>
 </div>
 
-<div id="users_mega">
+<div id="users_mega">LAST TEN MEGA DRAWS
 <% if @user.mega_draws %>
-	<% @user.mega_draws.uniq.reverse.each do |t| %>
-		<%= t.mega_draw %><br>
+	<% @user.mega_draws.last(10).uniq.reverse.each do |t| %>
+		<div class='last_ten'><%= t.mega_draw %></div>
 	<% end %>
 <% end %>
 </div>
 
+<div id="user_print_out">
+	<div class='user_ticket'>LAST 3 DIGIT DRAW
+	<% if @user.three_digit_draws.last %>
+		<%= @user.three_digit_draws.last.pick_three %><br>
+		<%= @user.three_digit_draws.last.created_at %>
+	<% end %>
+	</div>
 
-<div id='ticket_three2'>
-<% if @user.three_digit_draws.last %>
+	<div class='user_ticket'>LAST 4 DIGIT DRAW
+	<% if @user.four_digit_draws.last %>
+		<%= @user.four_digit_draws.last.pick_four %><br>
+		<%= @user.four_digit_draws.last.created_at %>
+	<% end %>
 
-	<%= @user.three_digit_draws.last.pick_three %>
-<% end %>
+		
+	</div>
+
+	<div class='user_ticket'>LAST MEGA DRAW
+	<% if @user.mega_draws.last %>
+		<%= @user.mega_draws.last.mega_draw %><br>
+		<%= @user.mega_draws.last.created_at %>
+	<% end %>
+	</div>
 </div>
 
-<div id='ticket_four2'>
-<% if @user.four_digit_draws.last %>
+<% @user.three_digit_draws.uniq.each do |u| %>
+	<% if u.pick_three == @user.state.three_digit %>
+		<% @hit3 << u.pick_three %>
+		<% end %>
+	<% end %>
 
-	<%= @user.four_digit_draws.last.pick_four %>
-<% end %>
-	
+	<% @user.four_digit_draws.uniq.each do |u| %>
+	<% if u.pick_four == @user.state.four_digit %>
+		<% @hit4 << u.pick_four %>
+		<% end %>
+	<% end %>
+
+	<% @user.mega_draws.uniq.each do |u| %>
+	<% if u.mega_draw == @state.three_digit %>
+		<% @hitM << u.mega_draw %>
+	<% if u.mega_draw == @state.four_digit %>
+		<% @hitM << u.mega_draw %>
+		<% end %>
+		<% end %>
+	<% end %>
+<div id="users_container">
+	<% if @hit3.empty? == false %>
+
+		<div class='match_container'>3 DIGIT MATCHES
+			<br><%= @hit3 %>
+		</div>
+		<% end %>
+	<% if @hit4.empty? == false %>
+		<div class='match_container'>4 DIGIT MATCHES
+			<br><%= @hit4 %>
+		</div>
+	<% end %>
+
+	<% if @hitM.empty? == false %>
+		<div class='match_container'>MEGA MATCHES
+			<br><%= @hitM %>
+		</div>
+		<% end %>
+
 </div>
-
-<div id='ticket_mega2'>
-<% if @user.mega_draws.last %>
-	<%= @user.mega_draws.last.mega_draw %>
-<% end %>
-</div>
-
-
 
 
 
