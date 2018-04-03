@@ -1,5 +1,6 @@
-<div id='state_index_heading'><h3>State Lottery Results</h3></div>
+<div id='state_index_heading'>State Lottery Results</div>
+
 
 <% @states.each do |s| %>
-   <div class='state_abbr'><a href="/states/<%= s.id %>"><%= s.name %></a></div>
-	<% end %>
+ 	<div class='state_abbr'><a href="/states/<%= s.id %>"><%= s.name %></a></div>
+ <% end %>
