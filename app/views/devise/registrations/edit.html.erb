@@ -1,5 +1,6 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="edit_heading"><h2>Edit <%= resource_name.to_s.humanize %></h2></div>
 
+<div class='devise_edit_form'>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -10,7 +11,7 @@
 
    <div class="field">
     <%= f.label :Lottery_State %>
-    <%= f.select(:lottery_state, State::STATE_LIST)%>
+    <%= f.select :state_id, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50'] %>
   </div>
 
   <div class="field">
@@ -23,7 +24,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :new_password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -37,17 +38,17 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
+  <div class="update_action">
     <%= f.submit "Update" %>
   </div>
 <% end %>
+</div>
 
-<h3>Cancel my account</h3>
+<div id='edit_back'>
+  <%= link_to "Back", :back %>
+</div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
