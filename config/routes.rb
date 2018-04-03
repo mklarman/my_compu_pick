@@ -14,7 +14,7 @@ resources :mega_draws
 devise_for :users, :controllers => { :registrations => 'users/registrations' }
 devise_scope :user do
   authenticated :user do
-    root :to => "welcome#show"
+    root :to => "states#index"
   end
   unauthenticated :user do
     root :to => 'devise/registrations#new', as: :unauthenticated_root

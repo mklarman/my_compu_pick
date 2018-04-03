@@ -14,3 +14,40 @@
  *= require_self
  */
 
+
+ #header{
+ 	width: 100%;
+ 	height: 200px;
+ 	border: 1px solid red;
+ 	background: black;
+ 	color: white;
+ 	text-align: center;
+ 	font-size: 30px;
+ }
+
+ #header_words{
+ 	height: 100px;
+ 	width: 900px;
+ 	margin-top: 80px;
+ 	margin-left: 260px;
+ }
+
+ #navbar{
+ 	height: 75px;
+ 	width: 100%;
+ 	display: inline-block;
+ 	font-size: 26px;
+ 	text-align: center;
+ }
+
+ .link_tabs{
+ 	height: 40px;
+ 	width: 300px;
+ 	display: inline-block;
+ }
+
+ #nav_helper{
+ 	height: 100px;
+ 	width: 80%;
+ }
+

@@ -1,4 +1,12 @@
+// var newArray = [];
+
+// newArray += x
+
+
+// console.log(newArray)
+
 window.onload = function(){
+	
 	var threeeDigits = document.getElementById("three_digit")
 	var fourDigit = document.getElementById('four_digit')
 	var zeros  = document.getElementById('zeros')
@@ -198,6 +206,8 @@ window.onload = function(){
 		megaTicket()
 		newMegaDraw.submit()
 	})
+
+
 
 
 }

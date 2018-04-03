@@ -1,7 +1,5 @@
-<h3>Diary Show Page</h3>
-
-
 <%= render 'edit' %>
+
 
 <div id="hiddenForm">
 	<%= render 'new' %>
@@ -78,6 +76,7 @@
 
 	<div class='user_ticket'>LAST MEGA DRAW
 	<% if @user.mega_draws.last %>
+		
 		<%= @user.mega_draws.last.mega_draw %><br>
 		<%= @user.mega_draws.last.created_at %>
 	<% end %>
@@ -87,6 +86,14 @@
 <% @user.three_digit_draws.uniq.each do |u| %>
 	<% if u.pick_three == @user.state.three_digit %>
 		<% @hit3 << u.pick_three %>
+			<% @hit3.each do |i| %>
+			<script>
+				var x = [];
+
+				x.push("<%= @hit3[0] %>")
+			</script>
+			<% end %>
+		
 		<% end %>
 	<% end %>
 
@@ -124,6 +131,10 @@
 		<% end %>
 
 </div>
+		 
+
+
+
 
 
 

@@ -1,5 +1,7 @@
-<%= form_for @state do |s| %>
-	<%=s.text_field :three_digit %>
-	<%=s.text_field :four_digit %>
-	<%= s.submit %>
-	<% end %>
+<div id='state_show'>
+	<%= form_for @state do |s| %>
+		Three Digit:<%=s.text_field :three_digit %><br>
+		Four Digit:<%=s.text_field :four_digit %>
+		<%= s.submit %>
+		<% end %>
+</div>
