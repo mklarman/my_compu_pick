@@ -6,5 +6,6 @@ class WelcomeController < ApplicationController
 
 	def show
 		@user = current_user
+		@diary = Diary.find_by_id(params[:id])
 	end
 end

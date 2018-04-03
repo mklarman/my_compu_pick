@@ -1,10 +1,5 @@
-<div class="the_welcome">
-	<p>Below is a form that will collect all the numbers that define you and surround you in society.  Think of the form as a guide.  Feel free to enter any numbers you feel mean something to you anywhere in the form.
-
-</div>
-
 <div class='form_wrapper'>
-	<%= form_for @diary do |f| %>
+	<%= form_for @user.diary do |f| %>
 	<%= f.hidden_field :user_id, :value => @user.id %>
 	<div class='edit_label'> Birthday:</div>
 		<div><%=f.text_field :birthdate, class: 'edit_field' %></div>
