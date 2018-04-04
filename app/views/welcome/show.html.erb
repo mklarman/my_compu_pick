@@ -1,12 +1,13 @@
-<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your Compu-pix fields.  Leave all the "/" ":" "-" out of your answers.</h2></div>
 
-<div id='create_diary'>
 	<% if !current_user.diary %>
-		<%= link_to "Enter Numbers", new_diary_path %>
+		<div id="form_intro">To begin, you must fill in your compu-pix form.  The form lists areas where a number may define you or be associated with you.  Feel free to enter up to 18 digits in any field.  This is your chance to control your personl compu-pix.</div>
+		<div id='create_diary'><%= link_to "My Compu-pix Form", new_diary_path %></div>
 		<% else %>
+		<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your Compu-pix fields.  Leave all the "/" ":" "-" out of your answers.</h2></div>
 		<%= render 'edit' %>
 	<% end %>
-</div>
+
+
 
 
 
