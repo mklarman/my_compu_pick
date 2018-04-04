@@ -1,3 +1,4 @@
+
 <%= render 'edit' %>
 
 
@@ -58,14 +59,14 @@
 </div>
 
 <div id="user_print_out">
-	<div class='user_ticket'>LAST 3 DIGIT DRAW
+	<div class='user_ticket', id="uTick1">LAST 3 DIGIT DRAW
 	<% if @user.three_digit_draws.last %>
 		<%= @user.three_digit_draws.last.pick_three %><br>
 		<%= @user.three_digit_draws.last.created_at %>
 	<% end %>
 	</div>
 
-	<div class='user_ticket'>LAST 4 DIGIT DRAW
+	<div class='user_ticket', id="uTick2">LAST 4 DIGIT DRAW
 	<% if @user.four_digit_draws.last %>
 		<%= @user.four_digit_draws.last.pick_four %><br>
 		<%= @user.four_digit_draws.last.created_at %>
@@ -74,7 +75,7 @@
 		
 	</div>
 
-	<div class='user_ticket'>LAST MEGA DRAW
+	<div class='user_ticket', id="uTick3">LAST MEGA DRAW
 	<% if @user.mega_draws.last %>
 		
 		<%= @user.mega_draws.last.mega_draw %><br>
@@ -114,18 +115,18 @@
 <div id="users_container">
 	<% if @hit3.empty? == false %>
 
-		<div class='match_container'>3 DIGIT MATCHES
+		<div class='match_container', id="m1">3 DIGIT MATCHES
 			<br><%= @hit3 %>
 		</div>
 		<% end %>
 	<% if @hit4.empty? == false %>
-		<div class='match_container'>4 DIGIT MATCHES
+		<div class='match_container', id="m2">4 DIGIT MATCHES
 			<br><%= @hit4 %>
 		</div>
 	<% end %>
 
 	<% if @hitM.empty? == false %>
-		<div class='match_container'>MEGA MATCHES
+		<div class='match_container', id="m3">MEGA MATCHES
 			<br><%= @hitM %>
 		</div>
 		<% end %>

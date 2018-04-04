@@ -1,9 +1,3 @@
-// var newArray = [];
-
-// newArray += x
-
-
-// console.log(newArray)
 
 window.onload = function(){
 	
@@ -46,11 +40,6 @@ window.onload = function(){
 	console.log(totalVal)
 	digitFreq(totalVal)
 
-	
-
-	
-
-	
 	
 	function digitFreq (numString){
 	    zeroDigit = numString.split("0").length-1

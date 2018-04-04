@@ -5,6 +5,12 @@
 
 
 
+.the_welcome{
+	height: 120px;
+	width: 100%;
+	font-size: 27px;
+}
+
 
 #new_form{
 	height: 400px;
@@ -68,12 +74,17 @@
 	margin-bottom: 8px;
 	font-size: 22px;
 	text-align: center;
+	background: black;
+	color: white;
 }
 
 #freq_label{
 	height: 80px;
 	width: 320px;
 	border: 1px solid red;
+	background: black;
+	color: white;
+
 }
 
 #pick3{
@@ -111,7 +122,6 @@
 #button_container{
 	height: 350px;
 	width: 250px;
-	border: 1px solid red;
 	text-align: center;
 	margin-left: 345px;
 	margin-top: -360px;
@@ -127,6 +137,8 @@
 	margin-left: 630px;
 	text-align: center;
 	margin-top: -360px;
+	background: green;
+	color: white;
 }
 
 #users_four{
@@ -137,6 +149,8 @@
 	margin-left: 890px;
 	text-align: center;
 	margin-top: -432px;
+	background: blue;
+	color: white;
 
 }
 
@@ -149,6 +163,8 @@
 	margin-left: 1150px;
 	text-align: center;
 	margin-top: -432px;
+	background: red;
+	color: white;
 
 
 }
@@ -160,6 +176,24 @@
 	display: inline-block;
 	margin-top: 20px;
 	font-size: 32px;
+	color: white;
+	
+}
+#uTick1{
+	background: green;
+
+}
+
+#uTick2{
+	background: blue;
+
+
+}
+
+#uTick3{
+	background: red;
+
+
 }
 
 #user_print_out{
@@ -170,8 +204,6 @@
 	text-align: center;
 	margin-top: 10px;
 }
-
-
 
 .match_container{
 	height: 430px;
@@ -184,6 +216,24 @@
 	display: inline-block;
 	margin-left: 125px;
 	overflow: none;
+	color: white;
+}
+
+#m1{
+	background: green;
+
+}
+
+#m2{
+	background: blue;
+
+
+}
+
+#m3{
+	background: red;
+
+
 }
 
 #users_container{
@@ -191,4 +241,11 @@
 	width: 1400px;
 	border: 1px solid red;
 
+}
+
+.edit_warning{
+	height: 60px;
+	width: 100%;
+	font-size: 19px;
+	text-align: center;
 }

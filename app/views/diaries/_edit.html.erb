@@ -1,4 +1,4 @@
-<h2>Number Diary of <%= current_user.fname %></h2>
+<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your Compu-pix fields.  Leave all the "/" ":" "-" out of your answers.</h2></div>
 
 <div class='form_wrapper'>
 	<%= form_for @user.diary do |f| %>
