@@ -11,7 +11,7 @@ class ThreeDigitDrawsController < ApplicationController
     pick3.user_id = user.id
     diary = Diary.find_by_id(params[:id])
   	if pick3.save
-  		redirect_back(fallback_location: root_path)
+  		redirect_back(fallback_location: states_path)
   	else
   	  	render  diaries_path
   	end
