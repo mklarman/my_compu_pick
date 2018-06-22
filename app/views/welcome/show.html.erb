@@ -1,17 +1,26 @@
 
 	<% if !current_user.diary %>
-		<div id="form_intro">To begin, you must fill in your compu-pix form.  The form extracts numbers that may define you or be associated with you in your life.  You can also just use the form to set your Compu-Pix probabilities to the range you wish.</div>
+		<div id="form_intro"><%= @user.fname %>, to begin you must fill in your compu-pix form.  The form extracts numbers that may define you or be associated with you, or use the form to customize your Compu-Pix probabilities to any range you wish.</div>
 		<div id='create_diary'><%= link_to "My Compu-pix Form", new_diary_path %></div>
 		<% else %>
-		<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your Compu-pix fields.  Leave all the "/" ":" "-" out of your answers.</h2></div>
-		<%= render 'edit' %>
+		<div id="profInfo">
+			
+			<div id="profName">Name: <%= @user.fname %></div>
+			<div id="threeDigitProf">3 Digit Draws: <%= @user.three_digit_draws.count %></div>
+			<div id="fourDigitProf">4 Digit Draws: <%= @user.four_digit_draws.count %></div>
+			<div id="megaProf">Mega Draws: <%= @user.mega_draws.count %></div>
+
+
+		</div>
+
+
 	<% end %>
 
 
 
 
 
-<div class='draw_totals'>3 Digit Compu-pix:
+<!-- <div class='draw_totals'>3 Digit Compu-pix:
 	<%= @user.three_digit_draws.count %>
 </div>
 
@@ -21,7 +30,7 @@
 
 <div class='draw_totals'>Mega Compu-Pix:
 	<%= @user.mega_draws.count %>
-</div>
+</div> -->
 
 <div id='proflinks'>
 
