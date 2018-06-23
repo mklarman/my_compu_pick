@@ -1,9 +1,34 @@
 
-<%= render 'edit' %>
-
+>>>>>>>YOU MUST HIT THE UPDATE BUTTON AT THE BOTTOM OF THE DIARY ANYTIME YOU LEAVE AND COME BACK TO YOUR QUICK PICKS GENERATOR.<<<<<<<
 
 <div id="hiddenForm">
 	<%= render 'new' %>
+</div>
+
+<div id="user_print_out">
+	<div class='user_ticket', id="uTick1">LAST 3 DIGIT DRAW
+	<% if @user.three_digit_draws.last %>
+		<%= @user.three_digit_draws.last.pick_three %><br>
+		<%= @user.three_digit_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
+	<% end %>
+	</div>
+
+	<div class='user_ticket', id="uTick2">LAST 4 DIGIT DRAW
+	<% if @user.four_digit_draws.last %>
+		<%= @user.four_digit_draws.last.pick_four %><br>
+		<%= @user.four_digit_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
+	<% end %>
+
+		
+	</div>
+
+	<div class='user_ticket', id="uTick3">LAST MEGA DRAW
+	<% if @user.mega_draws.last %>
+		
+		<%= @user.mega_draws.last.mega_draw %><br>
+		<%= @user.mega_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
+	<% end %>
+	</div>
 </div>
 
 <div id='three_digit'></div>
@@ -58,73 +83,13 @@
 <% end %>
 </div>
 
-<div id="user_print_out">
-	<div class='user_ticket', id="uTick1">LAST 3 DIGIT DRAW
-	<% if @user.three_digit_draws.last %>
-		<%= @user.three_digit_draws.last.pick_three %><br>
-		<%= @user.three_digit_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
-	<% end %>
-	</div>
 
-	<div class='user_ticket', id="uTick2">LAST 4 DIGIT DRAW
-	<% if @user.four_digit_draws.last %>
-		<%= @user.four_digit_draws.last.pick_four %><br>
-		<%= @user.four_digit_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
-	<% end %>
 
-		
-	</div>
-
-	<div class='user_ticket', id="uTick3">LAST MEGA DRAW
-	<% if @user.mega_draws.last %>
-		
-		<%= @user.mega_draws.last.mega_draw %><br>
-		<%= @user.mega_draws.last.created_at.in_time_zone("EST").strftime("%l:%M%P %b %d %Y") %>
-	<% end %>
-	</div>
-</div>
-
-<% @user.three_digit_draws.uniq.each do |u| %>
-	<% if u.pick_three == @user.state.three_digit %>
-		<% @hit3 << u.pick_three %>
-		
-		<% end %>
-	<% end %>
-
-	<% @user.four_digit_draws.uniq.each do |u| %>
-	<% if u.pick_four == @user.state.four_digit %>
-		<% @hit4 << u.pick_four %>
-		<% end %>
-	<% end %>
-
-	<% @user.mega_draws.uniq.each do |u| %>
-	<% if u.mega_draw == @state.three_digit %>
-		<% @hitM << u.mega_draw %>
-	<% if u.mega_draw == @state.four_digit %>
-		<% @hitM << u.mega_draw %>
-		<% end %>
-		<% end %>
-	<% end %>
-<div id="users_container">
-	<% if @hit3.empty? == false %>
-
-		<div class='match_container', id="m1">3 DIGIT MATCHES
-			<br><%= @hit3 %>
-		</div>
-		<% end %>
-	<% if @hit4.empty? == false %>
-		<div class='match_container', id="m2">4 DIGIT MATCHES
-			<br><%= @hit4 %>
-		</div>
-	<% end %>
-
-	<% if @hitM.empty? == false %>
-		<div class='match_container', id="m3">MEGA MATCHES
-			<br><%= @hitM %>
-		</div>
-		<% end %>
 
 </div>
+
+<%= render 'edit' %>
+
 		 
 
 

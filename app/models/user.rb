@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-	belongs_to :state
 	has_one :diary
 	has_many :three_digit_draws
 	has_many :four_digit_draws

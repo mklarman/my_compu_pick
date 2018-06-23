@@ -22,7 +22,6 @@ class DiariesController < ApplicationController
     @hit4 = []
     @hitM = []
     @array = []
-    @state = State.find(51)
   end
 
 
