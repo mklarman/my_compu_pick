@@ -1,6 +1,6 @@
 
 	<% if !current_user.diary %>
-		<div id="form_intro"><%= @user.fname %>, to begin you must fill in your compu-pix form.  The form extracts numbers that may define you or be associated with you, or use the form to customize your Compu-Pix probabilities to any range you wish.</div>
+		<div id="form_intro"><%= @user.fname %>, to begin you must fill in your quick picks form.  The form extracts numbers that may define you or be associated with you, but you can write any numbers you want into the form.</div>
 		<div id='create_diary'><%= link_to "My Compu-pix Form", new_diary_path %></div>
 		<% else %>
 		<div id="profInfo">
