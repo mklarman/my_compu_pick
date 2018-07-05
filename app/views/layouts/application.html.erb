@@ -34,7 +34,7 @@
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'link_tabs'  %>
         <div class='link_tabs'><a href="/users/<%= current_user.id %>">My Profile</a></div>
       <%= link_to "About Quick Picks", states_path, class: 'link_tabs'  %>
-      <%= link_to "My_Compu-Pix", diary_path(current_user.id), class: 'link_tabs'  %>
+      <%= link_to "My_Quick_Pix", diary_path(current_user.id), class: 'link_tabs'  %>
       <% end %>
     </div>
   </div>

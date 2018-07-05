@@ -31,6 +31,13 @@
 	</div>
 </div>
 
+<div id="button_container2">
+	<input id="pick3" type="submit" value="Draw Pick 3">
+	<input id="pick4" type="submit" value="Draw Pick 4">
+	<input id="mTick" type="submit" value="Draw Mega Lott.">
+</div>
+
+
 <div id='three_digit'></div>
 <div id='four_digit'></div>
 <div id='mega'></div>
@@ -49,38 +56,34 @@
 	<div class="num_label" id="nines"></div>
 </div>
 
-<div id="button_container">
-	<input id="pick3" type="submit" value="Draw Pick 3">
-	<input id="pick4" type="submit" value="Draw Pick 4">
-	<input id="mTick" type="submit" value="Draw Mega Lott.">
-</div>
 
 
 
-
-<div id="users_three">LAST TEN 3 DIGIT DRAWS
-<% if @user.three_digit_draws %>
-	<% @user.three_digit_draws.last(10).uniq.reverse.each do |t| %>
-		<div class="last_ten"><%= t.pick_three %><br></div>
-		<div><%#= t.created_at %></div>
+<div id="lastCont">
+	<div id="users_three">LAST TEN 3 DIGIT DRAWS
+	<% if @user.three_digit_draws %>
+		<% @user.three_digit_draws.last(10).uniq.reverse.each do |t| %>
+			<div class="last_ten"><%= t.pick_three %><br></div>
+			<div><%#= t.created_at %></div>
+		<% end %>
 	<% end %>
-<% end %>
-</div>
+	</div>
 
-<div id="users_four">LAST TEN 4 DIGIT DRAWS
-<% if @user.four_digit_draws %>
-	<% @user.four_digit_draws.last(10).uniq.reverse.each do |t| %>
-		<div class='last_ten'><%= t.pick_four %></div>
+	<div id="users_four">LAST TEN 4 DIGIT DRAWS
+	<% if @user.four_digit_draws %>
+		<% @user.four_digit_draws.last(10).uniq.reverse.each do |t| %>
+			<div class='last_ten'><%= t.pick_four %></div>
+		<% end %>
 	<% end %>
-<% end %>
-</div>
+	</div>
 
-<div id="users_mega">LAST TEN MEGA DRAWS
-<% if @user.mega_draws %>
-	<% @user.mega_draws.last(10).uniq.reverse.each do |t| %>
-		<div class='last_ten'><%= t.mega_draw %></div>
+	<div id="users_mega">LAST TEN MEGA DRAWS
+	<% if @user.mega_draws %>
+		<% @user.mega_draws.last(10).uniq.reverse.each do |t| %>
+			<div class='last_ten'><%= t.mega_draw %></div>
+		<% end %>
 	<% end %>
-<% end %>
+	</div>
 </div>
 
 

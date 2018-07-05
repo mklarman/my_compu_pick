@@ -97,6 +97,7 @@
 	border-radius: 20%;
 	margin-bottom: 20px;
 	background: green;
+
 }
 
 #pick4{
@@ -107,6 +108,7 @@
 	border-radius: 20%;
 	background: blue;
 	margin-bottom: 20px;
+	margin-left: 150px;
 
 }
 
@@ -118,28 +120,24 @@
 	border-radius: 20%;
 	background: red;
 	margin-bottom: 20px;
+	margin-left: 150px;
 
-}
-#button_container{
-	height: 350px;
-	width: 250px;
-	text-align: center;
-	margin-left: 370px;
-	margin-top: -445px;
-	margin-bottom: 10px;
 }
 
 #users_three{
 	height: 430px;
 	width: 250px;
 	border: 1px solid red;
-	margin-top: 100px;
+	margin-top: -439px;
 	font-size: 30px;
-	margin-left: 630px;
+	margin-left: 430px;
 	text-align: center;
-	margin-top: -360px;
 	background: green;
 	color: white;
+	position: absolute;
+	up: 20px;
+
+
 }
 
 #users_four{
@@ -147,11 +145,13 @@
 	width: 250px;
 	border: 1px solid red;
 	font-size: 30px;
-	margin-left: 890px;
+	margin-left: 700px;
 	text-align: center;
-	margin-top: -432px;
+	margin-top: -439px;
 	background: blue;
 	color: white;
+	position: absolute;
+	up: 20px;
 
 }
 
@@ -161,11 +161,13 @@
 	border: 1px solid red;
 	margin-top: -360px;
 	font-size: 30px;
-	margin-left: 1150px;
+	margin-left: 970px;
 	text-align: center;
-	margin-top: -432px;
+	margin-top: -439px;
 	background: red;
 	color: white;
+	position: absolute;
+	up: 20px;
 
 
 }
@@ -203,8 +205,7 @@
 	width: 1400px;
 	// display: inline-block;
 	text-align: center;
-	margin-top: 10px;
-
+	margin-top: 0px;
 }
 
 .match_container{
@@ -251,3 +252,20 @@
 	font-size: 19px;
 	text-align: center;
 }
+
+#button_container2{
+
+	height: 120px;
+	width: 100%;
+	display: inline-block;
+	margin-top: -100px;
+	margin-left: 200px;
+	margin-bottom: 20px;
+}
+
+// #lastCont{
+
+// 	height: 435px;
+// 	width: 800px;
+// 	border: 1px solid red;
+// }
