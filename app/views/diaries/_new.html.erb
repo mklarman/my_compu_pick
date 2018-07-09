@@ -1,19 +1,23 @@
 <h3>New Form For Diary</h3>
 
-<%= form_for @pick3 do |f| %>
-<%= f.hidden_field :user_id, :value => @user.id %>
-<div> <%=f.text_field :pick_three %></div>
-	<%=f.submit %>
-<% end %>
+<% if current_user %>
 
-<%= form_for @pick4 do |f| %>
-<%= f.hidden_field :user_id, :value => @user.id %>
-<div> <%=f.text_field :pick_four %></div>
-	<%=f.submit %>
-<% end %>
+	<%= form_for @pick3 do |f| %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+	<div> <%=f.text_field :pick_three %></div>
+		<%=f.submit %>
+	<% end %>
 
-<%= form_for @mega do |f| %>
-<%= f.hidden_field :user_id, :value => @user.id %>
-<div> <%=f.text_field :mega_draw %></div>
-	<%=f.submit %>
+	<%= form_for @pick4 do |f| %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+	<div> <%=f.text_field :pick_four %></div>
+		<%=f.submit %>
+	<% end %>
+
+	<%= form_for @mega do |f| %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+	<div> <%=f.text_field :mega_draw %></div>
+		<%=f.submit %>
+	<% end %>
+
 <% end %>

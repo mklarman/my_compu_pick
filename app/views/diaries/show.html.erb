@@ -5,6 +5,7 @@
 	<%= render 'new' %>
 </div>
 
+<% if current_user %>
 <div id="user_print_out">
 	<div class='user_ticket', id="uTick1">LAST 3 DIGIT DRAW
 	<% if @user.three_digit_draws.last %>
@@ -92,6 +93,7 @@
 </div>
 
 <%= render 'edit' %>
+<% end %>
 
 		 
 
