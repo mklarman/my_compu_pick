@@ -10,25 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180623152240) do
+ActiveRecord::Schema.define(version: 20180330131732) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "diaries", force: :cascade do |t|
     t.integer "user_id"
-    t.string "address", limit: 8
-    t.string "cell", limit: 8
-    t.string "birthdate", limit: 8
-    t.string "zipcode", limit: 8
-    t.string "age", limit: 8
-    t.string "partner_birthdate", limit: 8
-    t.string "work_addr", limit: 8
-    t.string "work_num", limit: 8
-    t.string "apt_num", limit: 8
-    t.string "kids", limit: 8
-    t.string "kids_birth", limit: 8
-    t.string "lucky_nums", limit: 8
-    t.string "license_plate", limit: 8
-    t.string "wake_up", limit: 8
-    t.string "sensitive", limit: 8
+    t.string "address"
+    t.string "cell"
+    t.string "birthdate"
+    t.string "zipcode"
+    t.string "age"
+    t.string "partner_birthdate"
+    t.string "work_addr"
+    t.string "work_num"
+    t.string "apt_num"
+    t.string "kids"
+    t.string "kids_birth"
+    t.string "lucky_nums"
+    t.string "license_plate"
+    t.string "wake_up"
+    t.string "sensitive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
