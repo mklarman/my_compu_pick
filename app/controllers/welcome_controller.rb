@@ -8,4 +8,9 @@ class WelcomeController < ApplicationController
 		@user = current_user
 		@diary = Diary.find_by_id(params[:id])
 	end
+
+	def about
+	
+	end
+
 end

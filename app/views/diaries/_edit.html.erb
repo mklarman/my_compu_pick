@@ -1,4 +1,4 @@
-<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your quick pix fields.  Leave all the "/" ":" "-", spaces, and all other characters out of your diary.  The form labels are just a guide to help you think of areas in life where a number means something to you, but feel free to write any numbers anywhere on the form.  You must hit the update button at the bottom of the form whenever you change it, or if you leave the page and come back.</h2></div>
+<div class="edit_warning"><h2><%= current_user.fname %>, remember to write only NUMBERS in your diary fields.  Leave all other characters and spaces out.  For security reasons remember to jumble answers or separate answers across several fields.  Also feel free to edit your diary at any time, if you have been seeing the number 9 all day lets say and you want to increase the chances of 9 coming out in your lottery picks, you can do that by just spamming a bunch of 9's into any of the fields.  Just remember to hit the UPDATE BUTTON when finsihed. </h2></div>
 
 <div class='form_wrapper'>
 	<%= form_for @user.diary do |f| %>

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
 # root to: "states#index"
 get "/users" => "welcome#index"
+get "/about" => "welcome#about"
 
 
 
-resources :states
+
 resources :diaries
 resources :three_digit_draws
 resources :four_digit_draws
