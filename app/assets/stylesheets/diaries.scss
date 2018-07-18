@@ -37,7 +37,7 @@
   padding: 1vmax;
   padding-bottom: 4vmax;
   border-radius: 1vmax;
-  margin-top: 10vmax;
+  margin-top: 3vmax;
 }
 
 .edit_label {
@@ -96,13 +96,13 @@
 }
 
 #pick3{
-	margin-top: 40px;
+	margin-top: 15px;
 	height: 100px;
 	width: 220px;
 	border: 1px solid red;
 	font-size: 30px;
 	border-radius: 20%;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
 	background: green;
 
 }
@@ -187,6 +187,7 @@
 	margin-top: 20px;
 	font-size: 32px;
 	color: white;
+	text-align: center;
 	
 	
 }
@@ -208,11 +209,11 @@
 }
 
 #user_print_out{
-	height: 250px;
-	width: 1400px;
+	height: 175px;
+	width: 100%;
 	// display: inline-block;
-	text-align: center;
-	margin-top: 0px;
+	text-align: left;
+	margin-top: 20px;
 }
 
 .match_container{
@@ -254,10 +255,10 @@
 }
 
 .edit_warning{
-	height: 60px;
+	height: 210px;
 	width: 100%;
 	font-size: 19px;
-	text-align: center;
+	text-align: left;
 }
 
 #button_container2{
@@ -265,8 +266,8 @@
 	height: 120px;
 	width: 100%;
 	display: inline-block;
-	margin-top: -100px;
-	margin-left: 200px;
+	margin-top: 0px;
+	margin-left: 30px;
 	margin-bottom: 20px;
 }
 
