@@ -12,7 +12,7 @@ class FourDigitDrawsController < ApplicationController
   	pick4 = FourDigitDraw.new(four_digit_draw_params)
     pick4.user_id = user.id
   	if pick4.save
-  		redirect_back(fallback_location: states_path)
+  		redirect_back(fallback_location: about_path)
   	else
   	  	render  diaries_path
   	end
