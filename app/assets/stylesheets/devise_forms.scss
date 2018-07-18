@@ -4,7 +4,7 @@
 	margin-left: 500px;
 	padding: 1%;
 	// border-radius: 2px;
-	margin-top: 325px;
+	margin-top: 200px;
 }
 
 #select_state{
@@ -111,5 +111,25 @@
 	text-align: center;
 	margin-left: 490px;
 	margin-bottom: 10px;
+
+}
+
+@media only screen and (max-width: 420px){
+
+	.the_welcome{
+
+		width: 50%;
+		height: 100%;
+		font-size: 15px;
+		overflow: none;
+	}
+
+	.devise_form{
+		background-color: rgba(225,225,225, 0.7);
+		width:200px;
+		margin-left: 370px;
+		margin-top: -300px;
+}
+
 
 }
