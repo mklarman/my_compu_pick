@@ -5,11 +5,11 @@
 
 #update{
 
-	height: 20px;
+	height: 90px;
 	width: 80%;
 	font-size: 22px;
 	margin-bottom: 25px;
-	margin-left: 200px;
+	margin-left: 0px;
 }
 
 .the_welcome{
@@ -269,6 +269,151 @@
 	margin-top: 0px;
 	margin-left: 30px;
 	margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 420px){
+
+	#user_print_out{
+		
+		height: 600px;
+		width: 250px;
+		display: block;
+		text-align: left;
+		margin-top: 0px;
+		margin-bottom: 20px;
+
+	}
+	#button_container2{
+
+		height: 380px;
+		width: 150px;
+		display: block;
+		margin-top: -600px;
+		margin-left: 250px;
+		margin-bottom: 20px;
+	}
+
+	#pick3{
+		margin-top: 0px;
+		height: 60px;
+		width: 150px;
+		border: 1px solid red;
+		font-size: 30px;
+		border-radius: 20%;
+		// margin-bottom: 20px;
+		background: green;
+
+	}
+
+	#pick4{
+		margin-top: 75px;
+		height: 60px;
+		width: 150px;
+		border: 1px solid red;
+		font-size: 30px;
+		border-radius: 20%;
+		background: blue;
+		margin-bottom: 20px;
+		margin-left: 0px;
+		
+
+	}
+
+	#mTick{
+		margin-top: 50px;
+		height: 60px;
+		width: 150px;
+		border: 1px solid red;
+		font-size: 30px;
+		border-radius: 20%;
+		background: red;
+		margin-bottom: 10px;
+		margin-left: 0px;
+
+	}
+
+	.user_ticket{
+		
+		height: 90px;
+		width: 240px;
+		border: 1px solid red;
+		display: block;
+		margin-top: 40px;
+		font-size: 25px;
+		color: white;
+		text-align: center;
+	
+	}
+
+	#update{
+
+		height: 150px;
+		width: 80%;
+		font-size: 22px;
+		margin-bottom: 25px;
+		margin-left: 0px;
+		
+	}
+
+	.edit_warning{
+		height: 200px;
+		width: 100%;
+		font-size: 15px;
+		text-align: left;
+		
+	}
+
+	#users_three{
+		height: 430px;
+		width: 250px;
+		border: 1px solid red;
+		margin-top: -439px;
+		font-size: 30px;
+		margin-left: 365px;
+		text-align: center;
+		background: green;
+		color: white;
+		position: absolute;
+		up: 20px;
+
+
+	}
+
+	#users_four{
+		height: 430px;
+		width: 250px;
+		border: 1px solid red;
+		font-size: 30px;
+		margin-left: 600px;
+		text-align: center;
+		margin-top: -439px;
+		background: blue;
+		color: white;
+		position: absolute;
+		up: 20px;
+
+	}
+
+	#users_mega{
+		height: 430px;
+		width: 250px;
+		border: 1px solid red;
+		margin-top: -360px;
+		font-size: 30px;
+		margin-left: 820px;
+		text-align: center;
+		margin-top: -439px;
+		background: red;
+		color: white;
+		position: absolute;
+		up: 20px;
+
+
+	}
+
+
+
+
 }
 
 // #lastCont{
