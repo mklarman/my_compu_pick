@@ -114,22 +114,44 @@
 
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 1100px){
 
 	.the_welcome{
 
-		width: 50%;
-		height: 100%;
-		font-size: 15px;
+		width: 30%;
+		height: 50%;
+		font-size: 13px;
 		overflow: none;
+
+
+	}
+
+	#intro_pix{
+
+		margin-top: 0px;
+		height: 450px;
 	}
 
 	.devise_form{
 		background-color: rgba(225,225,225, 0.7);
 		width:200px;
-		margin-left: 370px;
-		margin-top: -300px;
-}
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+
+	#login_heading{
+
+		margin-left: 140px;
+	}
+
+	#login_form{
+	  height: 340px;
+	  width: 200px;
+	  text-align: left;
+	  margin: auto;
+	  margin-top: 0px;
+	  font-size: 15px;
+	}
 
 
 }
