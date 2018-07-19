@@ -15,7 +15,7 @@
 .the_welcome{
 	height: 250px;
 	width: 100%;
-	font-size: 27px;
+	font-size: 22px;
 }
 
 
@@ -96,7 +96,7 @@
 }
 
 #pick3{
-	margin-top: 15px;
+	margin-top: 0px;
 	height: 100px;
 	width: 220px;
 	border: 1px solid red;
@@ -114,7 +114,7 @@
 	font-size: 30px;
 	border-radius: 20%;
 	background: blue;
-	margin-bottom: 20px;
+	margin-top: 0px;
 	margin-left: 150px;
 
 }
@@ -126,7 +126,7 @@
 	font-size: 30px;
 	border-radius: 20%;
 	background: red;
-	margin-bottom: 20px;
+	margin-top: 0px;
 	margin-left: 150px;
 
 }
@@ -183,8 +183,8 @@
 	height: 150px;
 	width: 350px;
 	border: 1px solid red;
-	display: inline-block;
 	margin-top: 20px;
+	display: inline-block;
 	font-size: 32px;
 	color: white;
 	text-align: center;
@@ -193,6 +193,7 @@
 }
 #uTick1{
 	background: green;
+	margin-top: 0px;
 
 }
 
@@ -204,6 +205,8 @@
 
 #uTick3{
 	background: red;
+	position: absolute;
+	down: 25px;
 
 
 }
@@ -211,7 +214,6 @@
 #user_print_out{
 	height: 175px;
 	width: 100%;
-	// display: inline-block;
 	text-align: left;
 	margin-top: 20px;
 }
@@ -263,7 +265,7 @@
 
 #button_container2{
 
-	height: 120px;
+	height: 100px;
 	width: 100%;
 	display: inline-block;
 	margin-top: 0px;
